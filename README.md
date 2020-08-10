@@ -1,6 +1,3 @@
 # Authenticated-SMTP-Tester
 
-This program is used to test Authenticated SMTP. Office 365 offers Authenticated SMTP, but
-TLS is required. This app allows toggling of TLS on or off to test Authenticated SMTP. The app \
-launches by default with Office 365 settings (ie. The endpoint is set to smtp.office365.com), although 
-any end point can be entered.
+SMTP authentication is typically used with devices like printers to send mail to Office 365. Office 365 required authenticated SMTP to get sent over TLS which makes using tools like Telnet to test very difficult. Authenticated SMTP Tester allows you to send mail to Office 365 (or out through Office 365) using Authenticated SMTP.
