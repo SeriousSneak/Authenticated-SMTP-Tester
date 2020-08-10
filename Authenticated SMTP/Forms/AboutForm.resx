@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>This application sends a test message using Authenticated SMTP. If
+installed from CODEBOX this application will autoupdate.
+
+Primary use case: For problems with Authenticated SMTP, this application 
+can be used to rule out issues with the network and the account being
+used for authentication.
+
+Usage instructions can be found at the following link (you need to be 
+connected to corpnet).</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>2.0.0 (July 16, 2020):      
+ - You can now specify a different sending mailbox. The account that 
+    you authenticate with must have Send As permissions on the 
+    mailbox that you are specifying as being the sender.
+ - Put a group box around Username and Password called 
+    Authentication Credentials
+ - Tab order updated to flow from top to bottom with the newly 
+    added controls
+ - Mailkit upgraded from 2.3.1.6 to 2.7.0. Mimekit upgraded 
+    from 2.3.1 to 2.8.0. BouncyCastle upgraded from 1.8.5 to 1.8.6.1.
+ - Ctrl-A will now select all text in a message box. Previously, you 
+    would have to manually select the text in a message box if you 
+    wanted to copy it.
+ - About popup and error popup will now appear on top of the main 
+    app window (as opposed to popping up on a secondary monitor)
+
+1.4.0 (September 18. 2019)
+ - code migrated to Mimekit and Mailkit
+ - With Mailkit, the application now generates an SMTP log file 
+    which can be opened with the new "SMTP log" button
+
+1.3.0 (March 21, 2019)
+ - error messages now appear in a new window, allowing the 
+    error text to be easily copied
+ - hitting tab now no longer stops on the MessageID box which 
+    is read only
+ - Text validation is now performed on the Port text box. An error 
+    will appear if this box contains anything other than an integer 
+ - Due to processing order, a non-sensical error (Error: A request 
+    to send or receive data was disallowed because the socket is not
+    connected and (when sending on a datagram socket using a 
+    sendto call) no address was supplied) would previously appear
+    if you could not reach the recipient server on port 25. This error 
+    has now been cleaned up.
+ - the code that detects if an end point is reachable has been 
+    optimized and better calls out a connection issue if the end point
+    cannot be reached 
+
+1.2.3 (September 24, 2015)
+ - Instructions to use the application have been added as a link
+   to the About form.
+
+1.2.2 (July 23, 2015)
+ - Application now gracefully closes the TCP connections that it 
+    establishes. You will no longer see RST (resets) in a network trace.
+    You will see the proper [FIN, ACK] TCP teardown sequence after
+    the message is sent.
+
+1.1.1 (June 25, 2015)
+  - Andrew's initial release of the application</value>
+  </data>
+</root>
