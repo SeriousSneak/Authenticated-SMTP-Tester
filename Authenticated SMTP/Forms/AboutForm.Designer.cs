@@ -86,14 +86,14 @@
             this.label4.Location = new System.Drawing.Point(12, 88);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(475, 168);
+            this.label4.Size = new System.Drawing.Size(475, 140);
             this.label4.TabIndex = 4;
             this.label4.Text = resources.GetString("label4.Text");
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 268);
+            this.label5.Location = new System.Drawing.Point(12, 228);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 17);
@@ -117,13 +117,13 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(15, 289);
+            this.textBox1.Location = new System.Drawing.Point(15, 249);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(471, 169);
+            this.textBox1.Size = new System.Drawing.Size(471, 209);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);

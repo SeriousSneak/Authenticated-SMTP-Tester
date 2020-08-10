@@ -174,18 +174,20 @@
 </value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>This application sends a test message using Authenticated SMTP. If
-installed from CODEBOX this application will autoupdate.
+    <value>This application sends a test message using Authenticated SMTP.
 
 Primary use case: For problems with Authenticated SMTP, this application 
 can be used to rule out issues with the network and the account being
 used for authentication.
 
-Usage instructions can be found at the following link (you need to be 
-connected to corpnet).</value>
+Usage instructions can be found at The above GitHub link.</value>
   </data>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>2.0.0 (July 16, 2020):      
+    <value>2.0.1 (August 10, 2020):    
+  - launch on HitHub!
+  - code cleanup (comments, redundant lines, formatting)
+
+2.0.0 (July 16, 2020):      
  - You can now specify a different sending mailbox. The account that 
     you authenticate with must have Send As permissions on the 
     mailbox that you are specifying as being the sender.
