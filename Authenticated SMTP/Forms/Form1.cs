@@ -37,8 +37,22 @@
  *                           - Ctrl-A will now select all text in a message box. Previously, you would have to manually select the text in a message box if you wanted to copy it.
  *                           - About popup and error popup will now appear on top of the main app window (as opposed to popping up on a secondary monitor) 
  *  
- *   2.0.1 (August 2020):    - launch on HitHub!
+ *   2.0.1 (August 2020):    - launch on GitHub!
  *                           - code cleanup (comments, redundant lines, formatting)
+ *                           
+ *   2.1.0 (Jan 08, 2021)    - Application will no longer crash if smtp.log is locked by another application
+ *                           - Button added to open windows explorer to the location where smtp.log is located 
+ *                           - input validation added to Username and Password text boxes
+ *                           - error text box is now larger and no longer has a "close button." The button was redundant as the window can be closed with the X
+ *                             in the upper right hand corner
+ *                           - tab index for controls fixed so that hitting tab progresses from top to bottom through the controls
+ *                           - application renamed from Authenticated SMTP Tester to Supa Awesome Authenticated SMTP Tester   
+ *                           - the installer now creates a desktop shortcut
+ *                           - Minor UI updates to buttons
+ *                           - Added a button which opens windows explorer to the directory where smtp.log resides
+ *                           - MailKit and MimeKit updated to version 2.10.1
+ *                           - BouncyCastle updated to version 1.8.9
+ *                           
  *
  *----------------------------------------------------------------------------*/
 
@@ -46,7 +60,6 @@
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-//using System.Net;
 using System.Net.Sockets;
 using MailKit.Net.Smtp;
 using MimeKit;
@@ -54,7 +67,6 @@ using MailKit.Security;
 using MailKit;
 using System.IO;
 using System.Diagnostics;
-//using System.Net.Mail;
 
 namespace Authenticated_SMTP
 {
@@ -76,8 +88,27 @@ namespace Authenticated_SMTP
             gui = Guid.NewGuid();
             String messageID = "<" + gui.ToString() + "@smtpt.local>";
 
+
+            /* -----------------------------------
+             * SMTP LOGGING TO SMTP.LOG
+             * -----------------------------------*/
             //smtp.log file will be created in the same directly that the executable is launched from
-            SmtpClient client = new SmtpClient(new ProtocolLogger("smtp.log"));
+            string logPath = "smtp.log";
+            FileInfo log = new FileInfo(logPath);
+
+            SmtpClient client;
+
+            //enable logging if either smtp.log isn't locked, or if it does not exist
+            if (IsFileLocked(log) == false || File.Exists(logPath) == false)
+            {
+                client = new SmtpClient(new ProtocolLogger(logPath));
+            }
+            else
+            {
+                client = new SmtpClient();
+                MessageBox.Show("The file smtp.log is currently in use by another application and will not be written to. The log within the application will still be written to.", "SMTP Log");
+            }
+
             MimeMessage mail = new MimeMessage();
 
             try
@@ -89,6 +120,12 @@ namespace Authenticated_SMTP
                 if (!isNumber)
                 {
                     throw new ApplicationException("The port is set to \"" + textPort.Text + "\" but must be an integer.");
+                }
+
+                //User name and Password validation
+                if (textUserName.Text == "" || textPassword.Text == "")
+                {
+                    throw new ApplicationException("Please enter both a User name and Password");
                 }
 
                 /* -----------------------------------
@@ -123,7 +160,7 @@ namespace Authenticated_SMTP
                 }
                 else
                 {
-                    socket.Disconnect(true);  //close this socket - this line is new in version 2.3.5
+                    socket.Disconnect(true);  //close this socket
                 }
 
                 client.Timeout = 10000; //10 second timeout                
@@ -138,7 +175,7 @@ namespace Authenticated_SMTP
                     mail.From.Add(new MailboxAddress(textFromName.Text, textUserName.Text));
                 }
 
-                mail.To.Add(new MailboxAddress("", textTo.Text));
+                mail.To.Add(new MailboxAddress(textTo.Text, textTo.Text));
                 mail.Subject = textSubject.Text;
                 mail.MessageId = messageID;
 
@@ -183,7 +220,6 @@ namespace Authenticated_SMTP
         private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
         {
             AboutForm af = new AboutForm();
-            //af.Show(); //will allow the form to lose focus
             af.ShowDialog(); //will prevent the form from losing focus
             e.Cancel = true; //this stops the question mark on the mouse curser from showing after the about box is closed
         }
@@ -198,6 +234,11 @@ namespace Authenticated_SMTP
             {
                 MessageBox.Show("Log file not yet created. Please send a message first.", "SMTP Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void bLogLocation_Click(object sender, EventArgs e)
+        {
+            Process.Start(Environment.CurrentDirectory);
         }
 
         private void checkDifferentSender_CheckedChanged(object sender, EventArgs e)
@@ -219,5 +260,28 @@ namespace Authenticated_SMTP
                 textMessageID.SelectAll();
             }
         }
+
+        protected virtual bool IsFileLocked(FileInfo file)  //https://stackoverflow.com/questions/876473/is-there-a-way-to-check-if-a-file-is-in-use
+        {
+            try
+            {
+                using (FileStream stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.None))
+                {
+                    stream.Close();
+                }
+            }
+            catch (IOException)
+            {
+                //the file is unavailable because it is:
+                //still being written to
+                //or being processed by another thread
+                //or does not exist (has already been processed)
+                return true;
+            }
+
+            //file is not locked
+            return false;
+        }
+
     }
 }
