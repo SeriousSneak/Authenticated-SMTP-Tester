@@ -191,14 +191,14 @@ Usage instructions can be found at The above GitHub link.</value>
  - input validation added to Username and Password text boxes
  - error text box is now larger and no longer has a "close button." The
     button was redundant as the window can be closed with the X in 
-    the upper right hand corner
+    the upper right-hand corner
  - tab index for controls fixed so that hitting tab progresses from top 
     to bottom through the controls
  - application renamed from Authenticated SMTP Tester to Supa 
     Awesome Authenticated SMTP Tester   
  - the installer now creates a desktop shortcut
  - Minor UI updates to buttons
- - Added a button which opens windows explorer to the 
+ - Added a button that opens windows explorer to the 
     directory where smtp.log resides
  - MailKit and MimeKit updated to version 2.10.1
  - BouncyCastle updated to version 1.8.9
