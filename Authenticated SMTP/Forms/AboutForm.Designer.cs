@@ -126,6 +126,7 @@
             this.textBox1.Size = new System.Drawing.Size(471, 209);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // linkLabel1

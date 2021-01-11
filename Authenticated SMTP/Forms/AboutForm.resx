@@ -183,8 +183,28 @@ used for authentication.
 Usage instructions can be found at The above GitHub link.</value>
   </data>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>2.0.1 (August 10, 2020):    
-  - launch on HitHub!
+    <value>2.1.0 (Jan 08, 2021)
+ - Application will no longer crash if smtp.log is locked by another 
+    application
+ - Button added to open windows explorer to the location where 
+    smtp.log is located 
+ - input validation added to Username and Password text boxes
+ - error text box is now larger and no longer has a "close button." The
+    button was redundant as the window can be closed with the X in 
+    the upper right hand corner
+ - tab index for controls fixed so that hitting tab progresses from top 
+    to bottom through the controls
+ - application renamed from Authenticated SMTP Tester to Supa 
+    Awesome Authenticated SMTP Tester   
+ - the installer now creates a desktop shortcut
+ - Minor UI updates to buttons
+ - Added a button which opens windows explorer to the 
+    directory where smtp.log resides
+ - MailKit and MimeKit updated to version 2.10.1
+ - BouncyCastle updated to version 1.8.9
+
+2.0.1 (August 10, 2020):    
+  - launch on GitHub!
   - code cleanup (comments, redundant lines, formatting)
 
 2.0.0 (July 16, 2020):      

@@ -34,5 +34,10 @@ namespace Authenticated_SMTP
                 textBox1.SelectAll();
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

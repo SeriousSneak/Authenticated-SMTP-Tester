@@ -370,7 +370,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Supa Awesome Authenticated SMTP Tester v2.1";
+            this.Text = "Supa Awesome Auth SMTP Tester v2.1";
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
