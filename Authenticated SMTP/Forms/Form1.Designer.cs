@@ -55,6 +55,7 @@
             this.textFromName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bLogLocation = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -64,13 +65,14 @@
             this.bSend.BackColor = System.Drawing.SystemColors.Window;
             this.bSend.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.bSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSend.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bSend.Location = new System.Drawing.Point(163, 397);
+            this.bSend.Location = new System.Drawing.Point(165, 397);
             this.bSend.Margin = new System.Windows.Forms.Padding(4);
             this.bSend.Name = "bSend";
-            this.bSend.Size = new System.Drawing.Size(133, 28);
+            this.bSend.Size = new System.Drawing.Size(164, 28);
             this.bSend.TabIndex = 11;
-            this.bSend.Text = "Send";
+            this.bSend.Text = "Send message";
             this.bSend.UseVisualStyleBackColor = false;
             this.bSend.Click += new System.EventHandler(this.bSend_Click);
             // 
@@ -93,16 +95,16 @@
             this.textPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
-            this.textPassword.Size = new System.Drawing.Size(294, 22);
-            this.textPassword.TabIndex = 3;
+            this.textPassword.Size = new System.Drawing.Size(319, 22);
+            this.textPassword.TabIndex = 2;
             // 
             // textUserName
             // 
             this.textUserName.Location = new System.Drawing.Point(125, 23);
             this.textUserName.Margin = new System.Windows.Forms.Padding(4);
             this.textUserName.Name = "textUserName";
-            this.textUserName.Size = new System.Drawing.Size(294, 22);
-            this.textUserName.TabIndex = 2;
+            this.textUserName.Size = new System.Drawing.Size(319, 22);
+            this.textUserName.TabIndex = 1;
             // 
             // labelPassword
             // 
@@ -168,7 +170,7 @@
             this.textSubject.Location = new System.Drawing.Point(142, 277);
             this.textSubject.Margin = new System.Windows.Forms.Padding(4);
             this.textSubject.Name = "textSubject";
-            this.textSubject.Size = new System.Drawing.Size(311, 22);
+            this.textSubject.Size = new System.Drawing.Size(337, 22);
             this.textSubject.TabIndex = 8;
             this.textSubject.Text = "Authenticated SMTP test";
             // 
@@ -177,14 +179,14 @@
             this.textBody.Location = new System.Drawing.Point(142, 309);
             this.textBody.Margin = new System.Windows.Forms.Padding(4);
             this.textBody.Name = "textBody";
-            this.textBody.Size = new System.Drawing.Size(311, 22);
+            this.textBody.Size = new System.Drawing.Size(337, 22);
             this.textBody.TabIndex = 9;
             this.textBody.Text = "Testing authenticated SMTP.";
             // 
             // labelPort
             // 
             this.labelPort.AutoSize = true;
-            this.labelPort.Location = new System.Drawing.Point(363, 11);
+            this.labelPort.Location = new System.Drawing.Point(383, 11);
             this.labelPort.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPort.Name = "labelPort";
             this.labelPort.Size = new System.Drawing.Size(34, 17);
@@ -193,10 +195,10 @@
             // 
             // textPort
             // 
-            this.textPort.Location = new System.Drawing.Point(405, 7);
+            this.textPort.Location = new System.Drawing.Point(425, 8);
             this.textPort.Margin = new System.Windows.Forms.Padding(4);
             this.textPort.Name = "textPort";
-            this.textPort.Size = new System.Drawing.Size(48, 22);
+            this.textPort.Size = new System.Drawing.Size(53, 22);
             this.textPort.TabIndex = 1;
             this.textPort.Text = "587";
             // 
@@ -205,7 +207,7 @@
             this.textTo.Location = new System.Drawing.Point(142, 245);
             this.textTo.Margin = new System.Windows.Forms.Padding(4);
             this.textTo.Name = "textTo";
-            this.textTo.Size = new System.Drawing.Size(311, 22);
+            this.textTo.Size = new System.Drawing.Size(336, 22);
             this.textTo.TabIndex = 7;
             // 
             // labelTo
@@ -234,7 +236,7 @@
             this.textMessageID.Margin = new System.Windows.Forms.Padding(4);
             this.textMessageID.Name = "textMessageID";
             this.textMessageID.ReadOnly = true;
-            this.textMessageID.Size = new System.Drawing.Size(311, 22);
+            this.textMessageID.Size = new System.Drawing.Size(336, 22);
             this.textMessageID.TabIndex = 16;
             this.textMessageID.TabStop = false;
             this.textMessageID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textMessageID_KeyDown);
@@ -242,13 +244,15 @@
             // bLog
             // 
             this.bLog.BackColor = System.Drawing.Color.White;
+            this.bLog.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.bLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bLog.Location = new System.Drawing.Point(354, 397);
+            this.bLog.Location = new System.Drawing.Point(345, 397);
             this.bLog.Margin = new System.Windows.Forms.Padding(4);
             this.bLog.Name = "bLog";
-            this.bLog.Size = new System.Drawing.Size(100, 28);
+            this.bLog.Size = new System.Drawing.Size(134, 28);
             this.bLog.TabIndex = 12;
-            this.bLog.Text = "SMTP log";
+            this.bLog.TabStop = false;
+            this.bLog.Text = "Open SMTP log";
             this.bLog.UseVisualStyleBackColor = false;
             this.bLog.Click += new System.EventHandler(this.BLog_Click);
             // 
@@ -259,7 +263,7 @@
             this.groupBox1.Controls.Add(this.checkDifferentSender);
             this.groupBox1.Location = new System.Drawing.Point(19, 138);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 63);
+            this.groupBox1.Size = new System.Drawing.Size(460, 63);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
@@ -268,7 +272,7 @@
             this.textDifferentAddress.Enabled = false;
             this.textDifferentAddress.Location = new System.Drawing.Point(125, 27);
             this.textDifferentAddress.Name = "textDifferentAddress";
-            this.textDifferentAddress.Size = new System.Drawing.Size(294, 22);
+            this.textDifferentAddress.Size = new System.Drawing.Size(319, 22);
             this.textDifferentAddress.TabIndex = 5;
             // 
             // label3
@@ -295,7 +299,7 @@
             // 
             this.textFromName.Location = new System.Drawing.Point(165, 214);
             this.textFromName.Name = "textFromName";
-            this.textFromName.Size = new System.Drawing.Size(288, 22);
+            this.textFromName.Size = new System.Drawing.Size(313, 22);
             this.textFromName.TabIndex = 6;
             // 
             // label4
@@ -315,17 +319,31 @@
             this.groupBox2.Controls.Add(this.labelPassword);
             this.groupBox2.Location = new System.Drawing.Point(19, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(435, 92);
-            this.groupBox2.TabIndex = 20;
+            this.groupBox2.Size = new System.Drawing.Size(460, 92);
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Authentication credentials";
+            // 
+            // bLogLocation
+            // 
+            this.bLogLocation.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.bLogLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bLogLocation.Location = new System.Drawing.Point(345, 365);
+            this.bLogLocation.Name = "bLogLocation";
+            this.bLogLocation.Size = new System.Drawing.Size(134, 28);
+            this.bLogLocation.TabIndex = 21;
+            this.bLogLocation.TabStop = false;
+            this.bLogLocation.Text = "Open log location";
+            this.bLogLocation.UseVisualStyleBackColor = true;
+            this.bLogLocation.Click += new System.EventHandler(this.bLogLocation_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(474, 434);
+            this.ClientSize = new System.Drawing.Size(491, 434);
+            this.Controls.Add(this.bLogLocation);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textFromName);
@@ -352,7 +370,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Authenticated SMTP Tester v2.0";
+            this.Text = "Supa Awesome Authenticated SMTP Tester v2.1";
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -391,6 +409,7 @@
         private System.Windows.Forms.CheckBox checkDifferentSender;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button bLogLocation;
     }
 }
 

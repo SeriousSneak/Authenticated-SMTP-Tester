@@ -15,7 +15,7 @@ namespace Authenticated_SMTP.Forms
         {
             InitializeComponent();
             this.Text = formTitle;
-            buttonClose.Text = buttonText;
+            //buttonClose.Text = buttonText;
             textBoxMessage.Text = errorMessage;
         }
 
