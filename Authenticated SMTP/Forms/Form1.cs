@@ -52,7 +52,10 @@
  *                           - Added a button that opens windows explorer to the directory where smtp.log resides
  *                           - MailKit and MimeKit updated to version 2.10.1
  *                           - BouncyCastle updated to version 1.8.9
- *                           
+ *
+ *  2.1.1 (August 2, 2022)   - .Net updated from 4.6 to 4.8
+ *                           - Updated MailKit and MimeKit from 2.10.1 to 3.3.0
+ *                           - Added a sentance to the About page noting that the application only supports Basic Auth and not Modern Auth
  *
  *----------------------------------------------------------------------------*/
 

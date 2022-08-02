@@ -174,7 +174,9 @@
 </value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>This application sends a test message using Authenticated SMTP.
+    <value>This application sends a test message using Authenticated SMTP. The
+application uses Basic Authentication and does not support Modern
+Authentication.
 
 Primary use case: For problems with Authenticated SMTP, this application 
 can be used to rule out issues with the network and the account being
@@ -183,7 +185,13 @@ used for authentication.
 Usage instructions can be found at The above GitHub link.</value>
   </data>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>2.1.0 (Jan 08, 2021)
+    <value>2.1.1 (August 2, 2022)   
+ - .Net updated from 4.6 to 4.8
+ - Updated MailKit and MimeKit from 2.10.1 to 3.3.0
+ - Added a sentance to the About page noting that the application 
+    only supports Basic Auth and not Modern Auth
+
+2.1.0 (Jan 08, 2021)
  - Application will no longer crash if smtp.log is locked by another 
     application
  - Button added to open windows explorer to the location where 
